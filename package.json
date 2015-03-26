@@ -1,0 +1,13 @@
+{
+  "name": "outloud",
+  "version": "1.0.0",
+  "description": "curate/create your own radio",
+  "main": "server.js",
+  "author": "Vahid Mazdeh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.2",
+    "querystring": "*",
+    "soundcloud-node": "*"
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello React</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <script src="//connect.soundcloud.com/sdk.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/jsx;harmony=true" src="scripts/main.js"></script>
+
+    <script>
+      SC.initialize({
+        client_id: "5eaf39e81aa342b9d5015a999666cbe1",
+        redirect_uri: "",
+      });
+
+      SC.get("/groups/55517/tracks", {limit: 1}, function(tracks){
+        alert("Latest track: " + tracks[0].title);
+      });
+</script>
+
+    <div> Hello World, this is going to be called OUTLOUD! </div>
+  </body>
+</html>

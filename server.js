@@ -1,14 +1,19 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
-var SoundCloudAPI = require('soundcloud-node');
+// var SoundCloudAPI = require('soundcloud-node');
 
-var client = new SoundCloudAPI (
+// var client = new SoundCloudAPI (
+// 	5eaf39e81aa342b9d5015a999666cbe1,
+// 	c8b6b03ee68491257384c06731e27cb9,
+	
 
-  )
+//   )
+
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
-	res.send("hello world")
 });
 
 app.post('/', function(req, res) {

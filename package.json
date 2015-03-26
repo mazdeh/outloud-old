@@ -7,7 +7,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.11.2",
-    "querystring": "*",
-    "soundcloud-node": "*"
+    "querystring": "*"
   }
 }

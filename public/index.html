@@ -12,19 +12,13 @@
   <body>
     <div id="content"></div>
     <script type="text/jsx;harmony=true" src="scripts/main.js"></script>
-    <script src="../private/soundcloud.js"></script>
+    <script src="scripts/soundcloud.js"></script>
 
-      
-
-      <script>
-
-      SC.connect(function(){
-
-          SC.oEmbed("https://soundcloud.com/jozaytnb/fetty-wap-my-way-feat-monty", document.getElementById("embed"));
-        
-        });
-
-      </script>
+    <script>
+    SC.connect(function(){
+      SC.oEmbed("https://soundcloud.com/jozaytnb/fetty-wap-my-way-feat-monty", document.getElementById("embed"));
+});
+    </script>
 
     <div id="embed"></div>
 

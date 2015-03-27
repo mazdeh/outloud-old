@@ -12,17 +12,11 @@
   <body>
     <div id="content"></div>
     <script type="text/jsx;harmony=true" src="scripts/main.js"></script>
+    <script src="../private/soundcloud.js"></script>
 
-    <script>
+      
 
-      SC.initialize({
-              client_id: "5eaf39e81aa342b9d5015a999666cbe1",
-              redirect_uri: "https://theoutloud.herokuapp.com/callback.html",
-            });
-
-      SC.get("/groups/55517/tracks", {limit: 1}, function(tracks){
-            alert(tracks[0].title);
-          });
+      <script>
 
       SC.connect(function(){
 
@@ -30,8 +24,7 @@
         
         });
 
-
-</script>
+      </script>
 
     <div id="embed"></div>
 

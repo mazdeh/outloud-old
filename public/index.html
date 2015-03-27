@@ -17,7 +17,7 @@
 
       SC.initialize({
               client_id: "5eaf39e81aa342b9d5015a999666cbe1",
-              redirect_uri: "/callback.html",
+              redirect_uri: "https://theoutloud.herokuapp.com/callback.html",
             });
 
       SC.get("/groups/55517/tracks", {limit: 1}, function(tracks){
@@ -25,16 +25,13 @@
           });
 
       SC.connect(function(){
-          SC.put("/me/followings/3207", function(user, error){
-            if(error){
-              alert("Error: " + error.message);
-            }else{
-              alert("You are now following " + user.username);
-            }
-          });
+
+          SC.oEmbed("https://soundcloud.com/jozaytnb/fetty-wap-my-way-feat-monty", {auto_play: true}, function(oembed){
+                console.log("oEmbed response: ", oembed);
+            });
         });
 
-      
+
 </script>
 
     <div> Hello World, this is going to be called OUTLOUD! </div>

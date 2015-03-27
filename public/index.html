@@ -26,13 +26,14 @@
 
       SC.connect(function(){
 
-          SC.oEmbed("https://soundcloud.com/jozaytnb/fetty-wap-my-way-feat-monty", {auto_play: true}, function(oembed){
-                console.log("oEmbed response: ", oembed);
-            });
+          SC.oEmbed("https://soundcloud.com/jozaytnb/fetty-wap-my-way-feat-monty", document.getElementById("embed"));
+        
         });
 
 
 </script>
+
+    <div id="embed"></div>
 
     <div> Hello World, this is going to be called OUTLOUD! </div>
   </body>

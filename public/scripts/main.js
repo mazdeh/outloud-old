@@ -1,39 +1,26 @@
-// var CommentForm = React.createClass({
-// 	handleSubmit: function(e) {
-//     e.preventDefault();
-//     // var author = this.refs.author.getDOMNode().value.trim();
-//     var text = this.refs.text.getDOMNode().value.trim();
-//     if (!text) {
-//       return;
-//     }
-//     this.props.onCommentSubmit({text: text});
-//     // this.refs.text.getDOMNode().value = '';
-//   },
+
+
+// var Initializer = React.createClass({
 //   render: function() {
 //     return (
-//       <form className="commentForm" onSubmit={this.handleSubmit}>
-//         <input type="text" size="40" placeholder="What are you doing RIGHT NOW?" ref="text" />
-//         <input type="submit" value="Post" />
-//       </form>
-//     );
+//         <SCInitialize 
+//       );
 //   }
+
 // });
 
-
 var SCInitialize = React.createClass({
-  
-  SC.initialize({
-    client_id: "5eaf39e81aa342b9d5015a999666cbe1",
-    redirect_uri: "",
-  });
 
-  SC.get("/groups/55517/tracks", {limit: 1}, function(tracks){
-        alert("Latest track: " + tracks[0].title);
-      });
+  getInitialState: function(){
+    return {}
+  },
 
   render: function() {
     return (
-        <div className="soundCloud" >
+      <div>
+        Hello, im just SCInitialize s render return
+        </div>
+
       );
   }
 

@@ -8,17 +8,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
     <script src="//connect.soundcloud.com/sdk.js"></script>
+
   </head>
   <body>
     <div id="content"></div>
     <script type="text/jsx;harmony=true" src="scripts/main.js"></script>
+    <script type="text/jsx;harmony=true" src="scripts/sc-record.js"></script>
     <script src="scripts/soundcloud.js"></script>
     <script src="scripts/nytimes.js"></script>
+
 
     <script>
       SC.connect(function(){
         SC.oEmbed("https://soundcloud.com/jozaytnb/fetty-wap-my-way-feat-monty", document.getElementById("embed"));
       });
+
     </script>
 
 

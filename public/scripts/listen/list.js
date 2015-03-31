@@ -1,4 +1,4 @@
-var DoctorList = React.createClass({displayName: 'DoctorList',
+var ReadList = React.createClass({displayName: 'ReadList',
 
     getInitialState: function() {
         return {data: []};

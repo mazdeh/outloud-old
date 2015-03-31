@@ -1,4 +1,4 @@
-$.get('https://theoutloud.herokuapp.com/svc/mostpopular/v2/mostemailed/sports/7.json', function(data) {
+$.get('https://api.nytimes.com/svc/mostpopular/v2/mostemailed/sports/7.json', function(data) {
   console.log(data)
 })
 

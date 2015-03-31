@@ -38,10 +38,11 @@ app.use(cors());
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
-app.get('/*', function(req, res) {
+app.get('/', function(req, res) {
 	nyt.query(req.url, function (err, json) {
   		if(!err) {
-	  		res.send(json)
+	  		res.send(json);
+	  		console.log("i got something");
 	  		console.log(json);
 	  	}
 	  	else {

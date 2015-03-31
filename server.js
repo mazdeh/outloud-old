@@ -2,6 +2,8 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
+var nyt = require('newyorktimes')(keys);
+
 // var SoundCloudAPI = require('soundcloud-node');
 
 // var client = new SoundCloudAPI (

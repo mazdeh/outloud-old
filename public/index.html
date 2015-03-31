@@ -15,10 +15,38 @@
     <script src="scripts/soundcloud.js"></script>
 
     <script>
-    SC.connect(function(){
-      SC.oEmbed("https://soundcloud.com/jozaytnb/fetty-wap-my-way-feat-monty", document.getElementById("embed"));
-});
+      SC.connect(function(){
+        SC.oEmbed("https://soundcloud.com/jozaytnb/fetty-wap-my-way-feat-monty", document.getElementById("embed"));
+      });
     </script>
+
+
+
+<script>
+//   $.ajax({
+//     url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('https://medium.com/feed/collection/top-stories'),
+//     dataType: 'json',
+//     success: function (data) {
+//       if (data.responseData.feed && data.responseData.feed.entries) {
+//         $.each(data.responseData.feed.entries, function (i, e) {
+//           console.log("------------------------");
+//           console.log("title      : " + e.title);
+//           console.log("author     : " + e.author);
+//           console.log("description: " + e.description);
+//           });
+//         }
+//       }
+//   });
+
+</script>
+
+
+<script>
+  nyt.query('http://api.nytimes.com/svc/semantic/v2/geocodes/query.json?country_code=US', function (err, json) {
+  console.log(json);
+});
+
+</script>
 
     <div id="embed"></div>
 

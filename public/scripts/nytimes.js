@@ -1,4 +1,4 @@
-$.get('https://api.nytimes.com/svc/mostpopular/v2/mostemailed/sport/7.json?api-key=b8269dd1516213a03c1e47f21fd5084e%3A7%3A71755816', function(data) {
+$.get('https://theoutloud.herokuapp.com/svc/mostpopular/v2/mostemailed/sports/7.json', function(data) {
   console.log(data)
 })
 

@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
-var nyt = require('newyorktimes')(keys);
+
 
 // var SoundCloudAPI = require('soundcloud-node');
 
@@ -13,9 +13,38 @@ var nyt = require('newyorktimes')(keys);
 
 //   )
 
+var keys = {
+  article_search: 'API_KEY',
+  best_sellers: 'API_KEY',
+  campaign_finance: 'API_KEY',
+  community: 'API_KEY',
+  congress: 'API_KEY',
+  districts: 'API_KEY',
+  event_listings: 'API_KEY',
+  geo: 'API_KEY',
+  most_popular: 'b8269dd1516213a03c1e47f21fd5084e:7:71755816',
+  movie_reviews: 'API_KEY',
+  real_estate: 'API_KEY',
+  semantic: 'API_KEY',
+  times_newswire: 'API_KEY',
+  timestags: 'API_KEY'
+};
+
+var nyt = require('newyorktimes')(keys);
+
+
 app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
+	nyt.query(req.url, function (err, json) {
+  		if(!err) {
+	  		res.send(json)
+	  		console.log(json);
+	  	}
+	  	else {
+	  		console.log("Error: ", err);
+	  	}
+	});
 });
 
 app.post('/', function(req, res) {
